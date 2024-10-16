@@ -1,0 +1,44 @@
+/* footer.component.css */
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center align items */
+}
+
+.social-links {
+  margin-top: 10px; /* Space above social links */
+}
+
+.social-links a {
+  margin: 0 10px; /* Spacing between icons */
+  display: inline-block; /* Ensure proper display */
+}
+
+.social-links img {
+  width: 24px; /* Set icon width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.social-links img:hover {
+  transform: scale(1.1); /* Scale up on hover for effect */
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9em; /* Smaller font size for footer text */
+}

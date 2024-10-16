@@ -1,0 +1,36 @@
+/* header.component.css */
+
+.navbar {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradient background */
+  padding: 15px 20px; /* Padding for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center align items vertically */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.nav-logo .logo {
+  font-size: 1.5em; /* Larger font for logo */
+  color: white; /* Logo text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-links {
+  display: flex; /* Use flexbox for links */
+}
+
+.nav-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding around links */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.2); /* Active link highlight */
+  border-radius: 5px; /* Rounded corners for active links */
+}

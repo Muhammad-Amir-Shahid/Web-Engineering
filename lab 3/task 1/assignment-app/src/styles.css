@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Change to a more appealing font */
+  background-color: #f0f4f8; /* Soft background color */
+  color: #444; /* Darker text color for better readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes full height */
+}
+
+main {
+  flex: 1; /* Allow main to grow and fill the space */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 40px; /* Add some padding */
+}
+
+/* Smooth transition for hover effects */
+a {
+  transition: color 0.3s ease;
+}

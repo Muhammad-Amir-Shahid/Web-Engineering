@@ -1,0 +1,21 @@
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" required #nameModel="ngModel">
+    <div *ngIf="nameModel.invalid && nameModel.touched">Name is required.</div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email" required email #emailModel="ngModel">
+    <div *ngIf="emailModel.invalid && emailModel.touched">Please enter a valid email.</div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required minlength="6" #passwordModel="ngModel">
+    <div *ngIf="passwordModel.invalid && passwordModel.touched">Password must be at least 6 characters.</div>
+  </div>
+
+  <button type="submit" [disabled]="signupForm.invalid">Signup</button>
+</form>

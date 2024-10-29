@@ -1,0 +1,28 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" placeholder="Enter your email" />
+      <div *ngIf="email?.invalid && email?.touched" class="error">
+        <small *ngIf="email?.errors?.['required']">Email is required.</small>
+        <small *ngIf="email?.errors?.['email']">Enter a valid email.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" placeholder="Enter your password" />
+      <div *ngIf="password?.invalid && password?.touched" class="error">
+        <small *ngIf="password?.errors?.['required']">Password is required.</small>
+        <small *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" class="login-button">Login</button>
+  </form>
+   <!-- Display transformed email -->
+   <p>Your email in lowercase: {{ email?.value | lowercase }}</p>
+   <p>Your formatted email: {{ email?.value | formatString }}</p>
+
+</div>

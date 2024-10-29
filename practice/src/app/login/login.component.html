@@ -21,7 +21,6 @@
 
     <button type="submit" [disabled]="loginForm.invalid" class="login-button">Login</button>
   </form>
-   <!-- Display transformed email -->
    <p>Your email in lowercase: {{ email?.value | lowercase }}</p>
    <p>Your formatted email: {{ email?.value | formatString }}</p>
 

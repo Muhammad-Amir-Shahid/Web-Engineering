@@ -1,0 +1,19 @@
+.login-container {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+}

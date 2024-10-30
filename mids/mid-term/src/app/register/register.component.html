@@ -1,0 +1,46 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" type="text">
+    <div *ngIf="name?.invalid && (name?.dirty)">
+      <small *ngIf="name?.errors?.['required']">Name is required.</small>
+      <small *ngIf="name?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age" type="number">
+    <div *ngIf="age?.invalid && (age?.dirty )">
+      <small *ngIf="age?.errors?.['required']">Age is required.</small>
+      <small *ngIf="age?.errors?.['min']">Age must be at least 18.</small>
+      <small *ngIf="age?.errors?.['max']">Age must be under 60.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email">
+    <div *ngIf="email?.invalid && (email?.dirty)">
+      <small *ngIf="email?.errors?.['required']">Email is required.</small>
+      <small *ngIf="email?.errors?.['email']">Invalid email format.</small>
+    </div>
+  </div>
+  <div>
+    <label for="course">Course:</label>
+    <select id="course" formControlName="course">
+      <option value="">Select a course</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Science">Science</option>
+      <option value="Arts">Arts</option>
+    </select>
+    <div *ngIf="course?.invalid && (course?.dirty )">
+      <small>Course is required.</small>
+    </div>
+  </div>
+  <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+<div *ngIf="registrationSuccess" style="color: green; margin-top: 10px;">
+  Registration Successful!
+</div>
+
+</form>

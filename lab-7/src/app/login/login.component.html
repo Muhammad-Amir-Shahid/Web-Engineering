@@ -3,6 +3,7 @@
   <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     <div>
       <label for="email">Email</label>
+
       <input id="email" type="email" formControlName="email" required />
       <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
         Email is required
@@ -19,4 +20,6 @@
 
     <button type="submit" [disabled]="loginForm.invalid">Login</button>
   </form>
+  <p>Email in lowercase: {{ 'YOUR_EMAIL@EXAMPLE.COM' | lowercaseEmail }}</p>
+
 </div>

@@ -14,6 +14,7 @@
     <input id="email" formControlName="email" />
     <span *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched" style="color: red;">
       Valid email is required!
+      <p>{{ signupForm.controls['email'].value | uppercase }}</p>
     </span>
   </div>
 

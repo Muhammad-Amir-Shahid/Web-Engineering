@@ -6,6 +6,7 @@
     <input id="email" formControlName="email" />
     <span *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" style="color: red;">
       Valid email is required!
+      <p>{{ loginForm.controls['email'].value | uppercase }}</p>
     </span>
   </div>
 

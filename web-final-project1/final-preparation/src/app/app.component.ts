@@ -6,14 +6,7 @@ import { SignupComponent } from './signup/signup.component';
   selector: 'app-root',
   standalone: true,
   imports: [LoginComponent, SignupComponent],
-  template: `
-    <h1>Welcome to Our App!</h1>
-    <div>
-      <app-login></app-login>
-      <hr />
-      <app-signup></app-signup>
-    </div>
-  `,
+  templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
